@@ -20,7 +20,7 @@
 // version 3, or (at your option) any later version.
 
 #include "_cgo_export.h"
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 
 void pbc_init_random();
 

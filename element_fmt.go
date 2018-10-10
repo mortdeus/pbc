@@ -22,7 +22,7 @@
 package pbc
 
 /*
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 #include "memstream.h"
 
 int element_out_str_wrapper(char** bufp, size_t* sizep, int base, element_t e) {

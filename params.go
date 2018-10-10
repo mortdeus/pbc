@@ -22,7 +22,7 @@
 package pbc
 
 /*
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 #include "memstream.h"
 
 struct pbc_param_s* newParamStruct() { return malloc(sizeof(struct pbc_param_s)); }

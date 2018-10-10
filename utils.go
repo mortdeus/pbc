@@ -22,7 +22,7 @@
 package pbc
 
 /*
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 
 void installRandomHook();
 void uninstallRandomHook();

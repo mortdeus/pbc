@@ -22,7 +22,7 @@
 package pbc
 
 /*
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 
 struct element_s* newElementStruct() { return malloc(sizeof(struct element_s)); }
 void freeElementStruct(struct element_s* x) {

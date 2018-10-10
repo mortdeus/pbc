@@ -70,7 +70,7 @@
 
 	This package must be compiled using cgo. It also requires the installation
 	of GMP and PBC. During the build process, this package will attempt to
-	include <gmp.h> and <pbc/pbc.h>, and then dynamically link to GMP and PBC.
+	include <gmp.h> and "external/pbc/include/pbc.h", and then dynamically link to GMP and PBC.
 
 	Most systems include a package for GMP. To install GMP in Debian / Ubuntu:
 

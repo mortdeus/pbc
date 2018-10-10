@@ -24,7 +24,7 @@ package pbc_test
 import (
 	"fmt"
 
-	"github.com/Nik-U/pbc"
+	"github.com/prysmaticlabs/pbc"
 )
 
 // This example generates a pairing and some random group elements, then applies

@@ -23,6 +23,6 @@ package pbc
 
 /*
 #cgo CFLAGS: -std=gnu99
-#cgo LDFLAGS: -lpbc -lgmp
+#cgo LDFLAGS: -lgmp
 */
 import "C"

@@ -23,7 +23,7 @@ package pbc
 
 /*
 #include <stdint.h>
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 
 typedef struct {
 	int typeD;

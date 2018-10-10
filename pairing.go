@@ -22,7 +22,7 @@
 package pbc
 
 /*
-#include <pbc/pbc.h>
+#include "external/pbc/include/pbc.h"
 
 struct pairing_s* newPairingStruct() { return malloc(sizeof(struct pairing_s)); }
 void freePairingStruct(struct pairing_s* x) {

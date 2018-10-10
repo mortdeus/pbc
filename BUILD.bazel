@@ -1,0 +1,46 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix github.com/prysmaticlabs/pbc
+gazelle(name = "gazelle")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "c.go",
+        "doc.go",
+        "element.go",
+        "element_arith.go",
+        "element_arith_simple.go",
+        "element_fmt.go",
+        "element_io.go",
+        "element_misc.go",
+        "errors.go",
+        "generation.go",
+        "gmp_big.go",
+        "memstream.h",
+        "memstream_bsdlike.go",
+        "memstream_other.go",
+        "memstream_posix.go",
+        "pairing.go",
+        "params.go",
+        "rand_hook.c",
+        "utils.go",
+    ],
+    cdeps = ["@pbc//:pbc-lib"],
+    cgo = True,
+    clinkopts = ["-lgmp"],
+    copts = ["-std=gnu99"],
+    importpath = "github.com/prysmaticlabs/pbc",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = [
+        "doc_bls_test.go",
+        "doc_test.go",
+        "pbc_test.go",
+    ],
+    embed = [":go_default_library"],
+)

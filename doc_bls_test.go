@@ -25,7 +25,7 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/Nik-U/pbc"
+	"github.com/prysmaticlabs/pbc"
 )
 
 // messageData represents a signed message sent over the network
