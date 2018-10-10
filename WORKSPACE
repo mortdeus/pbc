@@ -112,10 +112,34 @@ load("@bazel_tools//tools/cpp:cc_configure.bzl", "cc_configure")
 cc_configure()
 """,
     build_file_content = """
+genrule(
+  name = "gen-hdrs",
+  srcs = glob(["**/*"]),
+  outs = [
+    "config.h",
+    "gmp.h",
+  ],
+  cmd = "cd external/gmp; ./configure; mkdir -p $(@D); cp config.h $(location config.h); cp gmp.h $(location gmp.h)", 
+)
+
 cc_library(
   name = "gmp-lib",
   srcs = ["nextprime.c",],
   hdrs = ["gmp.h"],
   visibility = ["//visibility:public"],
 )""",
+)
+
+http_archive(
+    name = "glibc",
+    url = "https://github.com/lattera/glibc/archive/895ef79e04a953cac1493863bcae29ad85657ee1.zip",
+    strip_prefix = "glibc-895ef79e04a953cac1493863bcae29ad85657ee1",
+    sha256 = "a186ffdb2e9b6e153326102878d8ee03f924da3ca5207bcc005ad9437fee224",
+    build_file_content = """
+cc_library(
+  name = "gmp-lib",
+  srcs = [],
+  hdrs = [],
+  visibility = ["//visibility:public"],
+)"""
 )
