@@ -29,7 +29,6 @@ go_library(
     ],
     cdeps = ["@pbc//:pbc-lib"],
     cgo = True,
-    clinkopts = ["-lgmp"],
     copts = ["-std=gnu99"],
     importpath = "github.com/prysmaticlabs/pbc",
     visibility = ["//visibility:public"],
